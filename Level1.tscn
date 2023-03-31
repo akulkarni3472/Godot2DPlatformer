@@ -1,7 +1,17 @@
-[gd_scene format=3 uid="uid://bt7rb20uddr07"]
+[gd_scene load_steps=3 format=3 uid="uid://bt7rb20uddr07"]
+
+[ext_resource type="TileSet" uid="uid://cs6sv5it5nu7a" path="res://Resources/Tiles.tres" id="1_luv0h"]
+[ext_resource type="PackedScene" uid="uid://bqdvi5q0cyi6a" path="res://player.tscn" id="2_lp8ea"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(3, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-1, 0)
+tile_set = ExtResource("1_luv0h")
+collision_animatable = true
 format = 2
+layer_0/tile_data = PackedInt32Array(131072, 65537, 0, 131073, 131073, 0, 131074, 196609, 0, 131077, 65537, 1, 131078, 131073, 1, 131079, 196609, 1, 196613, 1, 10, 196615, 131073, 10, 196614, 65537, 10, 262149, 1, 11, 262150, 65537, 11, 262151, 131073, 11, 65541, 262145, 6, 65542, 327681, 6, 65543, 327681, 6, 65548, 1114113, 0, 65549, 1179649, 0, 65550, 1245185, 0, 131084, 1114113, 2, 131085, 1179649, 2, 131086, 1245185, 2, 262157, 1114113, 6, 327693, 1048577, 6, 327691, 1179649, 5, 327692, 1245185, 5, 196621, 1048577, 5, 393229, 1048577, 5, 458765, 1048577, 5)
+
+[node name="Player" parent="." instance=ExtResource("2_lp8ea")]
+position = Vector2(29, 16)
